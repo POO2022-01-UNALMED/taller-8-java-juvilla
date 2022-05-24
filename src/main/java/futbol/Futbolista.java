@@ -67,5 +67,14 @@ public abstract class Futbolista implements Comparable<Futbolista>{
 	public static void main(String Args[]) {
 		
 	}
+	
+	public int CompareTo(Futbolista f) {
+		if (this.nombre==f.nombre && this.edad==f.edad && this.posicion==f.posicion) {
+			return 0;
+		}
+		else {
+			return 1;
+		}
+	}
 
 }
