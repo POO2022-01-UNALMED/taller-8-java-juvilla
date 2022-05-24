@@ -24,7 +24,7 @@ public abstract class Futbolista implements Comparable<Futbolista>{
 	}
 	
 	public boolean equals(Futbolista f) {
-		if (this.getNombre()==f.getNombre() && this.getEdad()==f.getEdad() && this.getPosicion()==f.getPosicion()) {
+		if (this.compareTo(f)==0) {
 			return true;
 		}
 		else {
@@ -36,6 +36,8 @@ public abstract class Futbolista implements Comparable<Futbolista>{
 	
 	public abstract boolean jugarConLasManos();
 	
+	public abstract int compareTo(Futbolista f);
+	 
 	//metodos get y set
 	
 	public String getNombre() {
@@ -60,6 +62,10 @@ public abstract class Futbolista implements Comparable<Futbolista>{
 	
 	public void setPosicion(String posicion) {
 		this.posicion=posicion;
+	}
+	
+	public static void main(String Args[]) {
+		
 	}
 
 }

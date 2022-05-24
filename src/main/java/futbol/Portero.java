@@ -26,5 +26,4 @@ public class Portero extends Futbolista {
 		Portero a=(Portero) f;
 		return Math.abs(this.golesRecibidos-a.golesRecibidos);
 	}
-	
-}
+	}
