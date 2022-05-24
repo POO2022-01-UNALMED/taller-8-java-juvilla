@@ -6,10 +6,10 @@ public class Portero extends Futbolista {
 	
 	//constructor
 	
-	public Portero() {
-		super("Toromax",69,"Portero");
-		this.golesRecibidos=0;
-		this.dorsal=1;
+	public Portero(String nombre, int edad, short golesRecibidos, byte dorsal) {
+		super(nombre,edad,"Portero");
+		this.golesRecibidos=golesRecibidos;
+		this.dorsal=dorsal;
 	}
 	
 	//metodos
@@ -22,7 +22,6 @@ public class Portero extends Futbolista {
 		return "El futbolista " + this.getNombre() + " tiene " + this.getEdad() + ", y juega de "+ this.getPosicion() + " con el dorsal " + dorsal + ". Le han marcado "+ golesRecibidos;
 	}
 
-	@Override
 	public int compareTo(Futbolista f) {
 		Portero a=(Portero) f;
 		return Math.abs(this.golesRecibidos-a.golesRecibidos);
